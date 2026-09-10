@@ -1,0 +1,18 @@
+button {
+    background-color: aqua;
+    color: yellow;
+}
+#button3 {
+    font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+    text-decoration: underline double 3px;
+    text-shadow: 4px 5px green;
+    text-align: center;
+}
+.block {
+    display: block;
+}
+#link3 {
+    visibility: hidden;
+}

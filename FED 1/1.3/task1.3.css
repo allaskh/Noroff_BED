@@ -1,0 +1,19 @@
+#picachu {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#inlinelist li {
+    display: inline;
+}
+h1 {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    color: fuchsia;
+    text-align: center;
+}
+button {
+    background-color: green;
+}

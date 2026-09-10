@@ -1,0 +1,23 @@
+.menu {
+    float: left;
+    background-color: aquamarine;
+    width: 30%;
+    text-align: center;
+    border: 1px black;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 0 0 15px 0;
+    transition: all 2s;
+    transform-origin: top;
+}
+.menu:hover {
+    transform: scaleY(2);
+    background-color: pink; 
+}
+#panel2 {
+    background-color: red;
+    padding: 0 0 45px 0;
+}
+#panel2:hover {
+    background-color: pink;
+}
