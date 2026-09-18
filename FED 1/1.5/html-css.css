@@ -1,0 +1,55 @@
+#pikachu {
+    width: 100 px;
+    height: 140px;
+}
+h1 {
+    width: 50%;
+}
+#blue {
+    color: blue;
+}
+#paragraph3 {
+    margin: 2px, 20px, 5px, 10px;
+    padding: 2px, 20px, 5px, 10px;
+}
+.big {
+font-size: 200%;
+}
+.green{
+background-color: green;
+}
+.bold {
+font-weight: bold;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+#table16, #table16 th, #table16 td {
+    border: dashed red 2px;
+}
+#table16 th {
+    padding: 10px;
+}
+#task17 {
+    position: fixed;
+    left:400px;
+    top:400px;
+}
+#div1 {
+    width: 150px;
+    height: 100px;
+    overflow-x: scroll;
+}
+#div2 {
+    width:150px;
+    position: absolute;
+    right: 0px;
+}
+#background {
+    width:100%;
+    height:100%;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}

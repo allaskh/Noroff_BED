@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <img id ="first"
+        src="https://i.pinimg.com/originals/c9/40/a3/c940a3dae3900d100990e5b697ef196c.jpg" alt="Pika Pika">
+        <br>
+        <img src="https://i.pinimg.com/originals/c9/40/a3/c940a3dae3900d100990e5b697ef196c.jpg" alt="Pika Pika">
+        <p id="demo"></p>
+        <button onclick="showDetails()">Click me!</button>
+    </body>
+    <script>
+        document.getElementById("demo").innerHTML = "Number of images: " + document.images.length;
+        function showDetails(){
+            alert(
+                "Width: " +  document.getElementById("first").width + "\n" +
+                "Height: " + document.getElementById("first").height + "\n" +
+                "Source: " + document.getElementById("first").src
+            )
+        }
+    </script>
+</html>

@@ -1,0 +1,23 @@
+ <!DOCTYPE html> 
+<html>
+    <head>
+        <title>App</title>
+    </head>
+    <body>
+       <button onclick="helloWorld()" id="btn">Click me!</button>
+
+    </body>
+    <script>
+        function helloWorld (){
+            alert("Hello world!");
+        }
+        document.getElementById("btn").addEventListener("click", changingText);
+        function changingText() {
+        this.innerHTML = "Clicked";
+        }
+        document.getElementById("btn").addEventListener("click", changingColor);
+        function changingColor() {
+        this.style.backgroundColor = "green";
+        }
+    </script>
+</html>

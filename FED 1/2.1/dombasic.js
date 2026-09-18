@@ -1,0 +1,1 @@
+document.getElementById("para1").innerHTML = "It is the second paragraph";

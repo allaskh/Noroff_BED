@@ -1,0 +1,138 @@
+ <!DOCTYPE html> 
+<html>
+    <head>
+        <title>Task 2.5</title>
+    </head>
+    <body onload="printSize()" onresize="printSize()">
+       <p id="p1">This is text for ex 1</p>
+       <button onclick="changingText()">Change the first text!</button>
+       <p>This is the first paragraph</p>
+       <p>This is the second paragraph</p>
+       <button onclick="changingColors()">Change the color of the paragraphs!</button>
+       <p><a id = "link1" href="https://sweetalert2.github.io/" target="_blank" type="text/html">Click to see a cool link!</a></p>
+        <button onclick="giveAttributes()">Click to see the attributes!</button>
+        <table id="coolTable">
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+            </tr>
+            <tr>
+                <td>Barbara</td>
+                <td>Streisand</td>
+            </tr>
+            <tr>
+                <td>Suuemaa</td>
+                <td>Beebi</td>
+            </tr>
+        </table>
+        <button onclick="addRow()">Add a row to the table!</button>
+        <button onclick="changeCell()">Change 1 cell</button>
+        <button onclick="createTable()" style="background-color: aquamarine" id="task6button">Let's create a new table!</button>
+        <table id="task6table"></table>
+        <label for"dropdownList">This is a dropdown list</label>
+        <select id="dropdownList">
+            <option>Pizza</option>
+            <option>Sushi</option>
+            <option>Burger</option>
+            <option>Pasta</option>
+        </select>
+        <button onclick="removeListElement()">Remove 1 element from the list</button><br>
+        <img id="coolImage" >
+        <button onclick="displayPikachu()">Display Pikachu</button>
+        <button onclick="displayBulbasaur()">Display Bulbasaur</button>
+        <p>Then the <i>first</i> click works even though there isn't an imginitially, and <i>subsequent</i> clicks remove the previous Pokémon <i>before</i> adding the new one.</p>
+        <img 
+        onmouseover="highlight()"
+        onmouseout="highlightOut()"
+        src="https://cdn.pixabay.com/photo/2016/09/09/11/59/pokemon-1656997_960_720.png"
+        alt="pikachuagain">
+    </body>
+    <script>
+        function changingText(){
+            p1.style.fontSize = "16px";
+            p1.style.fontFamily = "Comic Sans MS";
+            p1.style.color = "blue";
+        }
+        function changingColors(){
+            body = document.getElementsByTagName("body")[0];
+            myBodyElements = body.getElementsByTagName("p");
+            firstParagraph = myBodyElements[1];
+            secondParagraph = myBodyElements[2];
+            firstParagraph.style.color = "red";
+            secondParagraph.style.color = "green";
+        }
+        function giveAttributes(){
+            alert("Href: " + document.getElementById("link1").href);
+            alert("Target: " + document.getElementById("link1").target);
+            alert("Type: " + document.getElementById("link1").type);
+        }
+        function addRow(){
+            let table = document.getElementById("coolTable").insertRow(1);
+            let name = table.insertCell(0);
+            let surname = table.insertCell(1);
+            name.innerHTML = "New Name";  
+            surname.innerHTML = "New Surname";
+            }
+        function changeCell(){
+            const rowNumber = window.prompt("Please select a row to change text (0, 1, 2, 3): ", "0");
+            const columnNumber = window.prompt("Please select a cell to change text (0, 1):", "0");
+            const content = window.prompt("Please write a new text for that cell:");
+            
+            let row = document.getElementById("coolTable").rows[parseInt(rowNumber,10)].cells;
+            row[parseInt(columnNumber,10)].innerHTML = content;
+        }
+        function createTable(){
+            const numberOfRows = parseInt(window.prompt("How many rows do you want the table to have?",1),10);
+            const numberOfColumns = parseInt(window.prompt("How many columns do you want the table to have?",1),10);
+            for (let r=0; r<numberOfRows; r++){
+                let row = document.getElementById("task6table").insertRow(r);
+                    for (let c=0; c<numberOfColumns; c++){
+                        let cell = row.insertCell(c);
+                        cell.innerHTML ="Row: "+ r + "Column: " + c;
+                }
+            }
+            task6button.style.visibility = "hidden";
+        }
+        function removeListElement(){
+            let index = parseInt(prompt("Select index of the element you want to remove",0))
+            let x = document.getElementById("dropdownList")
+            x.remove(index);
+        }
+        function printSize(){
+            console.log("The screen's width is: "+ window.innerWidth + "px, and the screen's height is: " + window.innerHeight + "px");
+        }
+        function displayPikachu(){
+            let pikachu = document.getElementById("coolImage");
+            pikachu.src="https://cdn.pixabay.com/photo/2016/09/09/11/59/pokemon-1656997_960_720.png";
+            pikachu.width = "240";
+            pikachu.height = "200";
+
+        }
+        function displayBulbasaur(){
+            let bulbasaur = document.getElementById("coolImage");
+            bulbasaur.src="https://cdn.pixabay.com/photo/2018/04/13/16/13/pixel-3316924_960_720.png";
+            bulbasaur.width = "235";
+            bulbasaur.height = "220";
+        }
+        let italicWords;
+        window.onload = getItalicWords();
+        function getItalicWords(){
+            italicWords = document.getElementsByTagName("i");
+        }
+
+        function highlight(){
+            for(i=0; i<italicWords.length; i++){
+                italicWords[i].style.backgroundColor = "blue";
+            }
+        }
+        function highlightOut(){
+            for(i=0; i<italicWords.length; i++){
+                italicWords[i].style.backgroundColor = "white";
+            }
+        }
+    </script>
+</html>

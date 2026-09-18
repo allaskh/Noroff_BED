@@ -1,0 +1,30 @@
+ <!DOCTYPE html> 
+<html>
+    <head>
+        <title>Task2.3</title>
+    </head>
+    <body>
+       <button onclick="newWindow()" style="background-color: greenyellow;">Click for new window</button>
+       <button onclick="makeSmaller()" style="background-color: pink;">Click to make window smaller</button>
+       <button onClick="showingURL()" style="background-color: bisque;">Click to show the URL</button>
+       <button onclick="history.back()">Back</button>
+       <button onclick="history.forward()">Next</button>
+    </body>
+    <script>
+        let myWindow;
+        function newWindow(){
+            myWindow = window.open("", "", "width=800, height=800");
+        }
+        function makeSmaller(){
+            if (myWindow != null && !myWindow.closed){
+                myWindow.resizeTo(myWindow.outerWidth/2, myWindow.outerHeight/2)
+            };
+        }
+        function showingURL(){
+            setTimeout(()=> {alert("This page's URL is " + window.location)
+            }
+            ,5000);
+        }
+        
+    </script>
+</html>

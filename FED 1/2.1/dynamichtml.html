@@ -1,0 +1,19 @@
+ <!DOCTYPE html> 
+<html>
+    <head>
+        <title>App</title>
+    </head>
+    <body>
+       <p id="demo">One paragraph</p>
+    </body>
+    <script>
+        setInterval(() => {
+            if (Math.random()<= 0.5) {
+                document.getElementById("demo").style.backgroundColor = "red"
+            }
+            else {
+                document.getElementById("demo").style.backgroundColor = "blue"
+            }
+    }, 5000)
+    </script>
+</html>

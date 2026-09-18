@@ -1,0 +1,18 @@
+ <!DOCTYPE html> 
+<html>
+    <head>
+        <title>App</title>
+    </head>
+    <body>
+       
+    </body>
+    <script>
+        function changeCookie(){
+            setInterval(function(){
+                document.cookie = "number=" + Math.floor(Math.random() * 11);
+                console.log(document.cookie);
+            }, 1000);
+        }
+        changeCookie();
+    </script>
+</html>

@@ -1,0 +1,33 @@
+ <!DOCTYPE html> 
+<html>
+    <head>
+        <title>App</title>
+    </head>
+    <body>
+    <script>
+    let heading = document.createElement("h2");
+    let node = document.createTextNode("Javascript HTML DOM");
+    heading.appendChild(node);
+    document.body.appendChild(heading);
+    let para = document.createElement("p");
+    node = document.createTextNode("Add a new element");
+    para.appendChild(node);
+    document.body.appendChild(para);
+
+    let div = document.createElement("div");
+    document.body.appendChild(div);
+    para = document.createElement("p");
+    node = document.createTextNode("This is a paragraph");
+    para.appendChild(node);
+    div.appendChild(para);
+
+    
+    para = document.createElement("p");
+    node = document.createTextNode("This ia another paragraoph");
+    para.appendChild(node);
+    div.appendChild(para);
+    
+    </script>
+    </body>
+    
+</html>
