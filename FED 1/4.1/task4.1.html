@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Task 4.1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+  <body>
+    <p class="h1 pb-3">First paragraph</p>
+    <p class="h2 ps-1">Second paragraph</p>
+    <p class="h3 pe-5" >Third paragraph</p>
+
+    <div class="list-group">
+        <button type ="button" onclick="changeToGreen(this)"class="list-group-item list-group-item-action">First button</button>
+        <button type ="button" class="list-group-item list-group-item-action">Second button</button>
+        <button type ="button" class="list-group-item list-group-item-action">A third button</button>
+    </div>
+    <figure class="figure">
+        <img class="figure-img img-fluid img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaJ224E7WsSF8MXdYATPc2r40mIgHzQkYkrmhlnF4CIg&s=10" alt="Cute dog pic">
+        <figcaption class="figure-caption text-end"><i class="bi bi-heart"></i>Hei there!<i class="bi bi-heart"></i></figcaption>
+    </figure>
+
+  </body>
+  <script>
+    function changeToGreen(button){
+      $(button).addClass("list-group-item-success")
+    }
+  </script>
+  <script src="jquery-3.6.0.js"></script>
+</html>
