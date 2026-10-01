@@ -1,0 +1,79 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link href="./css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
+  <title>Task 4.2</title> 
+</head> 
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary"> 
+  <div class="container-fluid"> 
+    <a class="navbar-brand">Navigation bar</a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+        <li class="nav-item"> 
+          <a class="nav-link" aria-current="page" href="https://www.google.com/"> <i class="bi bi-1-circle"></i> 
+          </a> 
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link" aria-current="page" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> 
+            <i class="bi bi-2-circle"></i> </a> 
+            </li>
+          <li class="nav-item"> 
+            <a class="nav-link" aria-current="page" href="https://getbootstrap.com/docs/5.3/layout/gutters/"> 
+              <i class="bi bi-3-circle"></i> </a> 
+            </li>
+            <li class="nav-item"> <a class="nav-link" id="liveToastBtn"> 
+              <i class="bi bi-4-circle"></i> </a> 
+            </li> 
+        </ul> 
+        </div> 
+        </div> </nav> 
+        <!-- TOAST --> 
+         <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11"> 
+          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"> <div class="toast-header">
+             <strong class="me-auto">Bootstrap</strong> <small>some mins ago</small> 
+             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"> </button> 
+             </div> 
+             <div class="toast-body"> Hello, world! This is a toast message. </div> 
+             </div> 
+        </div> 
+        <h1>Here comes the carousel!</h1>
+        <div id="carouselExampleControls" class="container p-5 carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKRyzzog1DNrV7hpE6A8AZFb7yoyO3YMixsY9D_DZ9p3AfY2RKp4H9u8CL&s=10" class="d-block w-50" alt="Cute Dog 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://plus.unsplash.com/premium_photo-1694819488591-a43907d1c5cc?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3V0ZSUyMHB1cHBpZXN8ZW58MHx8MHx8fDA%3D" class="d-block w-50" alt="Cute Dog 2">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next end-50" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+  </div>
+  <h1>Here is button group!</h1>
+  <div class="btn-group-vertical ms-5" role="group" aria-label="Vertical button group">
+  <button type="button" class="btn btn-primary">Button 1</button>
+  <button type="button" class="btn btn-secondary">Button 2</button>
+  <button type="button" class="btn btn-danger">Button 3</button>
+</div>
+   <script src="jquery-3.6.0.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+  <script> 
+  $("#liveToastBtn").click(function() { 
+    const toastElement = document.getElementById("liveToast"); 
+    const toast = new bootstrap.Toast(toastElement); 
+    toast.show(); 
+    }); 
+    </script> 
+    </body> 
+    </html>
