@@ -1,0 +1,107 @@
+ <!DOCTYPE html> 
+<html>
+    <head>
+        <title>Task4.5</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+     <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    </head>
+    <body>
+       <h1 class="display-1">My Heading</h1>
+       <table class="table table-hover">
+    <tr class = "table-success">
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr class="table-danger">
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr class="table-primary">
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </table>
+    <button type="button" class="btn btn-outline-danger">First button</button>
+    <button type="button" class="btn btn-success btn-sm" disabled>Second button</button>
+    <a href="https://google.com" type="button" class="btn btn-warning btn-lg">Third button</a>
+    <ul class="list-group">
+  <li class="list-group-item">Numero 1</li>
+  <li class="list-group-item">Numero 2</li>
+  <li class="list-group-item">Numero 3</li>
+    </ul>
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="https://www.google.com/">One</a>
+    <a class="dropdown-item" href="https://www.google.com/">Two</a>
+    <a class="dropdown-item" href="https://www.google.com/">Three</a>
+    <hr class="dropdown-divider">
+    <a class="dropdown-item" href="https://www.google.com/">Four</a>
+  </div>
+</div>
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.google.com/">En</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.google.com/">To</a>
+  </li>
+</ul>
+<div id="carouselExampleSlidesOnly" class="container p-5 carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-10" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmWrhsRZDRPPXTEmNCZ3LI-6TRZOavcK-A4PJu8mZ4ZQ&s=10" alt="First cute cat">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-10" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEwdeZNrDQURbfC8PZ7q5zEX2LqkG0jUFfmMdNGdi_hA&s=10" alt="Second cute cat">
+    </div>
+  </div>
+</div>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+          <div class="bg-warning col">Column</div>
+          <div class="bg-primary col">Column</div>
+          <div class="bg-danger col">Column</div>
+          <div class="bg-success col">Column</div>
+        </div>
+      </div>
+<button type="button" class="btn btn-primary" id="liveToastBtn">This is the toast button</button>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">TOAST NOTIFICATION</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      The new toast notification!
+    </div>
+  </div>
+</div>
+<br>
+<figure class="figure">
+        <img class="figure-img img-fluid img-thumbnail" src="https://cdn.pixabay.com/photo/2022/03/30/13/16/betta-7101167__340.jpg" alt="Betta">
+        <figcaption class="figure-caption">This is something called betta, idk</figcaption>
+    </figure>
+<script>
+  const toastTrigger = document.getElementById('liveToastBtn');
+  const toastLiveExample = document.getElementById('liveToast');
+
+  if (toastTrigger) {
+    toastTrigger.addEventListener('click', () => {
+      const toast = new bootstrap.Toast(toastLiveExample);
+      toast.show();
+    });
+  }
+</script>
+    </body>
+</html>
