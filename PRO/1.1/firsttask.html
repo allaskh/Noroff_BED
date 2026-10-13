@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <button id="incrementButton">Add value!</button>
+        <button id="decrementButton">Decrease value!</button>
+        <script>
+            const matchScore = {
+                homeScore: 0,
+                awayScore: 0,
+                homeGoal: function (status) {
+                    this.homeScore++;
+                },
+                awayGoal: function (status) {
+                    this.awayScore++;
+                },
+            };
+            const someObject = {
+            }
+            function addProperty(){
+                someObject.new = 10;
+                console.log(someObject);
+            }
+            function removeProperty(){
+                delete someObject.new;
+                console.log(someObject);
+            }
+            const value = {
+                realValue: 0,
+                increment: function(){
+                    this.realValue++;
+                    console.log(this.realValue);
+                },
+                decrement: function(){
+                    this.realValue--;
+                    console.log(this.realValue);
+                },
+            }
+            document.getElementById("incrementButton").onclick = function(){
+                value.increment();
+            }
+            document.getElementById("decrementButton").onclick = function(){
+                value.decrement();
+            }
+
+        </script>
+        <button onclick="addProperty()">Add property!</button>
+        <button onclick="removeProperty()">Remove property!</button>
+    
+    </body>
+</html>

@@ -1,0 +1,49 @@
+ <!DOCTYPE html> 
+<html>
+    <head>
+        <title>Task 1.2</title>
+    </head>
+    <body>
+       
+    </body>
+    <script>
+    class MyClass {
+    constructor(
+        name,
+        age
+    ) {
+        this.name = name;
+        this.age = age;
+    }
+    bark() {
+        console.log("Bark bark!");
+    }
+    birth(){
+        var today = new Date();
+        var year = today.getFullYear();
+        console.log("This dog was born in: " + (year - this.age));
+    }
+}
+function MyFunction (
+    name,
+    age
+) {
+    this.name = name;
+    this.age = age;
+    this.bark2 = function() {
+        console.log("Bark bark!");
+    }
+    this.birth2 = function(){
+        var idag = new Date();
+        console.log("This dog was born in: "+(idag.getFullYear() - this.age));
+    }
+}
+var dog1 = new MyClass("Rex", 5);
+var dog2 = new MyFunction("Betti", 7);
+dog1.bark();
+dog1.birth();
+dog2.bark2();
+dog2.birth2();
+
+    </script>
+</html>

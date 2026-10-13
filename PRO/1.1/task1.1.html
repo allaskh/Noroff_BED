@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task1.1</title>
+    </head>
+    <button onclick="askPrompt()">Modify a property!</button>
+        <button onclick="myObject.sum()">Sum</button>
+        <button onclick="myObject.multiply()">Multiply</button>
+    <body>
+        <script>
+            const myObject = {
+                numberValue1: 6,
+                numberValue2: 7,
+                sum: function () {
+                    console.log(this.numberValue1 + this.numberValue2);
+                },
+                multiply: function () {
+                    console.log(this.numberValue1 * this.numberValue2);
+                },
+            };
+            function askPrompt(){
+                const answer = prompt("Hei! Give me a name of the property you want to modify");
+                if (myObject[answer] != null){
+                    const newValue = parseInt(prompt("Give me a new value for that property!"));
+                    if (!isNaN(newValue)){
+                        myObject[answer] = newValue;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
